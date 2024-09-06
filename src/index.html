@@ -1,9 +1,34 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minesweeper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <h1>Minesweeper</h1>
+
+    <button id="dark-mode-toggle" class="btn btn-dark">Enable Dark Mode</button>
+
     
-  </head>
-  <body>
-    <h1>Hello world</h1>
-  </body>
+    <div id="start-game-section" class="text-center">
+        <button id="start-game-button" class="btn btn-primary mb-3">Start Game</button>
+        <div id="difficulty-buttons" class="hidden">
+            <button class="btn btn-secondary mb-2" onclick="startGameWithDifficulty('easy')">Easy</button>
+            <button class="btn btn-secondary mb-2" onclick="startGameWithDifficulty('medium')">Medium</button>
+            <button class="btn btn-secondary mb-2" onclick="startGameWithDifficulty('expert')">Expert</button>
+        </div>
+    </div>
+
+    
+    <div class="board hidden"></div>
+
+    
+    <button id="reset-button" class="btn btn-warning hidden" onclick="resetGame()">Reset Game</button>
+
+    <script src="solution-template.js"></script>
+</body>
 </html>
